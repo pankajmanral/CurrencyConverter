@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+
+  <style>
+    #convertDiv{
+        backdrop-filter: blur(10px);
+    }
+  </style>
+
+  <body>
+    <div
+      id="main"
+      class="h-screen w-full bg-gray-400 flex flex-col justify-center items-center">
+      <div class="h-screen w-full">
+        <img src="./background.avif" class="w-full h-full bg-center" alt="">
+      </div>
+
+
+
+      <div id="convertDiv" class="bg-transparent h-1/2 w-4/5 fixed z-4 rounded-2xl ps-5 transition-height duration-500">
+        <div class="h-60 flex justify-between items-center px-5 text-white">
+          <div class="flex flex-col w-80">
+            <label for="" class="text-xl">Amount</label>
+            <input class="h-10 my-2 border border-1 rounded-lg" type="number" name="" id="" />
+          </div>
+          <div class="flex flex-col w-80">
+            <label for="" class="text-xl">From</label>
+            <input class="h-10 my-2 border border-1 rounded-lg" name="" list="fromCountry" id="" />
+            <datalist id="fromCountry">
+                <option value="USD">USD</option>
+                <option value="IND">IND</option>
+                <option value="EUR">EUR</option>
+            </datalist>
+          </div>
+          <div class="flex flex-col w-fit rounded-full p-2">
+            <i class=" ri-exchange-line text-5xl"></i>
+          </div>
+          <div class="flex flex-col w-80">
+            <label for="" class="text-xl">To</label>
+            <input class="h-10 my-2 border border-1 rounded-lg" list="toCountry" name="" id="" />
+            <datalist id="toCountry">
+                <option value="USD">USD</option>
+                <option value="IND">IND</option>
+                <option value="EUR">EUR</option>
+            </datalist>
+          </div>
+        </div>
+        <div class="w-full flex justify-end pe-4">
+            <button id="convertButton" class="bg-blue-300 h-10 text-xl px-3 rounded-2xl">Convert</button>
+        </div>
+
+        <div id="amount" class="hidden ps-5 text-white">
+            <h1 class="text-lg">3.00 US Dollars = </h1>
+            <h1 class="text-2xl">2.7156251 Euros</h1>
+            <h2 class="text-sm">PANKAJ</h2>
+            <h2 class="text-md">MArnal</h2>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
